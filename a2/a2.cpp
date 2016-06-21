@@ -91,7 +91,7 @@ int main()
     cout << "Clock Faults: " << clock_faults << endl;
 
     //Write Faults to file
-    //writeFaults(OPTfaults, SCfaults, 0);
+    writeFaults(OPTfaults, SCfaults, clock_faults);
 
     return 0;
 }
