@@ -4,15 +4,13 @@
 # Assignment #3, Alarm Clock
 # Makefile
 
+CFLAGS = -lrt -lpthread -lncurses
 
-aclock: a3.o alarm_clock.o
-	g++ -o aclock a3.o alarm_clock.o
+aclock: a3.o
+	g++ $(CFLAGS) -o aclock a3.o
 	
-a3.o:	a3.cpp alarm_clock.h
+a3.o:	a3.cpp
 	g++ -c a3.cpp
 	
-alarm_clock.o:	alarm_clock.cpp alarm_clock.h
-	g++ -c alarm_clock.cpp
-	
 clean:
-	rm -f *.o
+	rm -f *.o aclock
