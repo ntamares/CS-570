@@ -187,7 +187,7 @@ void init_pthreads(alarm_data aTime, int timer)
   
   	//Initialize POSIX Threads and attribute variables
   	
-    int status1;
+    	int status1;
 	int status2;
 	int status3;
 
