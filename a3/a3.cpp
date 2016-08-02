@@ -31,7 +31,6 @@ struct alarm_data{
 //Then exits the program
 void signal_handler(int signum)
 {
-	
 	int kstat;
   	//Cancel Clock thread
 	kstat = pthread_cancel(threads[0]);
@@ -91,7 +90,6 @@ void *alarm(void *AL)
 	
 	while(alon) 
 	{
-		
 		// Set current time
 		time_t now = time(0);
 		tm * ltm   = localtime(&now);
